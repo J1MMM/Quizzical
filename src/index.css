@@ -37,11 +37,10 @@ body {
 .intro-page > p{
   color: #293264;
   margin-top: .5rem;
-  margin-bottom: 2rem;
 }
 .startquiz-btn{
-  width: 193px;
-  height: 52px;
+  width: 150px;
+  height: 50px;
   background: #4D5B9E;
   border-radius: 15px;
   color: #F5F7FB;
@@ -157,6 +156,64 @@ fieldset{
 }
 
 button{-webkit-tap-highlight-color: transparent;}
+label{
+  color: #293264;
+  margin-bottom: 5px;
+}
+select{
+  background-color: transparent;
+  height: 2rem;
+  font-size: medium;
+  color: #3b4579;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.number-of-question{
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: #293264;
+  width: 19rem;
+  height: .8rem;
+  background-color: #F5F7FB;
+  border: 1px solid rgba(0, 0, 0, 0.425);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.number-of-question:active{
+  border: 1px solid black;
+}
+.btn-up{
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #293264;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-down{
+  cursor: pointer;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid #293264;
+  -webkit-tap-highlight-color: transparent;
+}
+.up-down-btn-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.intro-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0rem;
+
+}
 
 @media (max-width: 480px) {
   .blobs{
@@ -203,5 +260,11 @@ button{-webkit-tap-highlight-color: transparent;}
     width: 80%;
     gap: 1rem;
     padding-bottom: 1rem;
+  }
+  .number-of-question{
+    width: 15rem;
+  }
+  select{
+    width: 16rem;
   }
 }
