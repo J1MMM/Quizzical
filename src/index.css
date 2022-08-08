@@ -156,9 +156,11 @@ fieldset{
 }
 
 button{-webkit-tap-highlight-color: transparent;}
+
 label{
   color: #293264;
   margin-bottom: 5px;
+  font-weight: 800;
 }
 select{
   background-color: transparent;

@@ -9,7 +9,6 @@ import blobs2 from './images/blobs2.png'
 
 export default function App() {
   const [gamestart, setGamestart] = useState(false);
-  const [loading, setLoading] = useState(true);
   const [questions, setQuestions] = useState([]);
   const [score, setScore] = useState({total_score: null, total_items: null});
   const [submit, setSubmit] = useState(false);
@@ -70,7 +69,6 @@ export default function App() {
     setQuestions([])
     setScore(() => ({total_score: null, total_items: null}))
     setSubmit(false)
-    setLoading(true)
   }
 
   const questionsElements = questions.map(data =>{
@@ -110,11 +108,6 @@ export default function App() {
           })
         })
       })
-
-      const timer = setTimeout(() => {
-        setLoading(false)
-      }, 1500);
-
     }
   return (
     <div className="App">
@@ -122,7 +115,7 @@ export default function App() {
       <img src={blobs2} className='blobs blobs2'/>
       {!gamestart ? 
         <IntroPage introFormSubmited={introFormSubmited} setApiHelper={setApiHelper} apiHelper={apiHelper} setGamestart={setGamestart}/> : 
-        loading === true ?
+        questions.length < 1  ?
         <LoadingPage /> :
         <form className="question-page" onSubmit={handleSubmit}>
           {questionsElements}
